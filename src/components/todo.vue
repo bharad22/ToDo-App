@@ -22,7 +22,7 @@
           <button class="btn1" id="btn1" @click="add"><i class="fas fa-plus"></i></button>
         </div>
         <div  class="card-body card3" v-for="(i,index) in notes" :key="index">
-         <input type="text" name="" v-model="notes[index]" class="bb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-trash-alt ic" @click="del(i)"></i>
+         <input type="text" name="" v-model="notes[index]" class="bb"> <i class="fas fa-trash-alt ic" @click="del(i)"></i>
         </div>
       </div></center>
     </div>
@@ -52,7 +52,6 @@ export default {
         document.getElementById("btn1").click();
         }
         });
-
 
         db.collection("users").doc(this.email).get().then(doc=>{
             this.notes=doc.data().notes
@@ -134,21 +133,21 @@ export default {
  }
 .card3 input[type=text]{
      font-size: 25px;
-     
+     max-width: 80%;
+     overflow-wrap: break-word;     
 }
 .ic{
-    margin-bottom: 10px;
     font-size: 25px;
-    margin-top: -40px;
+    margin-top: 10px !important;
     position: absolute;
     cursor: pointer;
-    margin-left: 180px;
-    margin-right: 100px;
+    padding-left: 0px;
+    float: left;
 }
 
 @media only screen and (max-width: 600px){
     .card1{
-     width: 87%;
+     width:90%;
      height: fit-content;
  }
  .btn1{
@@ -157,20 +156,24 @@ export default {
      float: left;
  }
  .ic{
-    margin-bottom: 10px;
     font-size: 25px;
-    margin-top: -40px;
+    margin-top: 10px !important;
     position: absolute;
     cursor: pointer;
-    margin-left: 160px;
-    margin-right: 10px;
+    padding-left: 0px;
+    float: left;
 }
 }
 .textt{
     float: left;
 }
+.card3 input[type=text]{
+     font-size: 25px;
+     
+}
 h2{
     font-style: italic;
     color: white;
 }
+
 </style>
