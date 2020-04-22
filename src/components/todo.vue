@@ -108,7 +108,7 @@ export default {
  .bg-img{
     background-image: url("sign.jpg");
     position: relative;
-    height: 800px;
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
  }
@@ -152,7 +152,7 @@ export default {
  }
  .btn1{
      padding:14px 0px;
-     width: 15%;
+     width: 16%;
      float: left;
  }
  .ic{
