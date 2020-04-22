@@ -120,7 +120,7 @@ export default {
      
  }
  .btn1{
-     padding:16px 0px;
+     padding:15px 0px;
      width: 17%;
      float: left;
  }
@@ -142,15 +142,29 @@ export default {
     margin-top: -40px;
     position: absolute;
     cursor: pointer;
-    margin-left: 210px;
+    margin-left: 180px;
     margin-right: 100px;
 }
 
 @media only screen and (max-width: 600px){
     .card1{
-     width: 97%;
+     width: 87%;
      height: fit-content;
  }
+ .btn1{
+     padding:14px 0px;
+     width: 15%;
+     float: left;
+ }
+ .ic{
+    margin-bottom: 10px;
+    font-size: 25px;
+    margin-top: -40px;
+    position: absolute;
+    cursor: pointer;
+    margin-left: 160px;
+    margin-right: 10px;
+}
 }
 .textt{
     float: left;
